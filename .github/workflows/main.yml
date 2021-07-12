@@ -27,4 +27,7 @@ jobs:
 
       - name: Old PHPUnit
         uses: gc-i/old-phpunit-action@v1.3
+        with:
+          # location of the PHPUnit config XML
+          configfile: phpunit.xml.dist
 
