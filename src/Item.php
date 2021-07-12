@@ -9,6 +9,12 @@ class Item
     public int $sell_in;
     public int $quality;
 
+    /**
+     * 
+     * @param string $name
+     * @param int $sell_in
+     * @param int $quality
+     */
     function __construct(string $name, int $sell_in, int $quality) 
     {
         $this->name = $name;
