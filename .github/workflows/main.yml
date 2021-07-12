@@ -24,10 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Old PHPUnit
-        uses: gc-i/old-phpunit-action@v1.3
-        with:
-          # location of the PHPUnit config XML
-          configfile: phpunit.xml.dist
+      
+      - name: phpstan (PHP Static Analysis)
+      # You may pin to the exact commit or the version.
+      # uses: actions-x/phpstan@61bd915732739dfe570ad3ce2a648156704f8903
+        uses: actions-x/phpstan@v1
+      
 
