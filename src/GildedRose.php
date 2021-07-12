@@ -2,17 +2,25 @@
 
 namespace Runroom\GildedRose;
 
+use Runroom\GildedRose\Item;
+
 class GildedRose 
 {
 
+    /**
+     * @var array<Item>
+     */
     private $items;
 
-    function __construct($items) 
+    /**
+     * @param array<Item> $items
+     */
+    function __construct(array $items) 
     {
         $this->items = $items;
     }
 
-    function updateQuality() 
+    function updateQuality(): void
     {
         foreach ($this->items as $item) {
             
@@ -60,7 +68,7 @@ class GildedRose
             
             if ($item->quality > 0) {
                 $item->quality = $item->quality - 1;
-                
+                //Si sell_in vale menos de 0 y quality sigue valiendo más de 0 lo volvemos a decrecer una vez más
                 if ($item->sell_in < 0 and $item->quality > 0) {
                     $item->quality = $item->quality - 1;
                 }
