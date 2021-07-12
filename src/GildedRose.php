@@ -2,15 +2,18 @@
 
 namespace Runroom\GildedRose;
 
-class GildedRose {
+class GildedRose 
+{
 
     private $items;
 
-    function __construct($items) {
+    function __construct($items) 
+    {
         $this->items = $items;
     }
 
-    function updateQuality() {
+    function updateQuality() 
+    {
         foreach ($this->items as $item) {
             if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
                 if ($item->quality > 0) {
