@@ -2,8 +2,6 @@
 
 namespace Runroom\GildedRose;
 
-use Runroom\GildedRose\Item;
-
 class GildedRose 
 {
 
