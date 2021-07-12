@@ -24,9 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Old PHPUnit
-      # You may pin to the exact commit or the version.
-      # uses: gc-i/old-phpunit-action@fc46fcb48f3fbd1b7835a9fc9ae7e94e377700ba
-      uses: gc-i/old-phpunit-action@v1.3
+        uses: gc-i/old-phpunit-action@v1.3
 
